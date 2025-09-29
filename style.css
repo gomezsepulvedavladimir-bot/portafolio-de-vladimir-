@@ -48,15 +48,4 @@ section { padding:40px 20px; text-align:center; }
 }
 
 /* Formulario */
-form input, form button { padding:10px; margin:10px 0; width:250px; border-radius:5px; border:none; }
-form button { background:#d32f2f; color:white; }
-
-/* Botón subir arriba */
-#btnArriba { position:fixed; bottom:20px; right:20px; background:#d32f2f; color:white; border:none; padding:12px; border-radius:50%; cursor:pointer; display:none; transition:0.3s; }
-#btnArriba:hover { transform:scale(1.2); }
-
-/* Responsive */
-@media(max-width:768px){
-    nav ul li{ display:block; margin:10px 0; }
-    .libros{ flex-direction:column; align-items:center; }
-}
+form input, form button { padding:10px; margin:10px 0; wid
