@@ -1,94 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Vladimir Gómez Sepúlveda</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    margin:0;
+    font-family:'Poppins',Arial,sans-serif;
+    background:#111;
+    color:#fff;
+    scroll-behavior:smooth;
+}
 
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="eggman.jpg" alt="Logo Eggman" class="eggman-logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#inicio">🏠 Inicio</a></li>
-            <li><a href="#sobre-mi">👤 Sobre mí</a></li>
-            <li><a href="#gustos">📚 Gustos</a></li>
-            <li><a href="#proyectos">🤖 Proyectos</a></li>
-            <li><a href="#contacto">📞 Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+/* Header */
+header {
+    background:#d32f2f;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+    text-align:center;
+}
+nav ul { list-style:none; margin:0; padding:0; }
+nav ul li { display:inline-block; margin:0 15px; }
+nav a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+nav a:hover { color:#ffcc00; }
+.eggman-logo { width:80px; height:auto; }
 
-<!-- Inicio -->
-<section id="inicio" class="inicio fade-in">
-    <h1>Vladimir Gómez Sepúlveda</h1>
-    <p>Bienvenidos a mi portafolio personal</p>
-    <img src="eggman.jpg" alt="Eggman" class="eggman-inicio">
-</section>
+/* Secciones */
+section { padding:40px 20px; text-align:center; }
+.inicio img.eggman-inicio { width:150px; max-height:200px; margin:20px auto; display:block; }
 
-<!-- Sobre mí -->
-<section id="sobre-mi" class="sobre-mi fade-in">
-    <h2>Sobre mí</h2>
-    <button class="dynamic-btn" id="toggleInfo">Ocultar / Revelar Info</button>
-    <div id="infoContent">
-        <p>Tengo 17 años, soy estudiante del CASD y me apasiona la electrónica y los videojuegos.</p>
-        <p>Tal vez se pregunten por qué tengo una foto de Eggman. Fue un personaje que me inspiró de pequeño a crear robots y nunca se rendía.</p>
-    </div>
-</section>
+/* Animaciones existentes */
+.fade-in { opacity:0; transform:translateY(20px); transition:all 1s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+@keyframes zoomIn { from { transform: scale(0.5); opacity:0; } to { transform: scale(1); opacity:1; } }
 
-<!-- Gustos -->
-<section id="gustos" class="gustos fade-in">
-    <h2>Mis Gustos y Pasiones</h2>
-    <p>Me gusta disfrutar de un café ☕ y también cocinar 👨‍🍳.</p>
-    <div class="libros">
-        <div>
-            <img src="fnaf1.jpg" alt="FNAF Los Ojos Plateados">
-            <p>Los Ojos Plateados</p>
-        </div>
-        <div>
-            <img src="fnaf2.jpg" alt="FNAF Los Otros Animatrónicos">
-            <p>Los Otros Animatrónicos</p>
-        </div>
-        <div>
-            <img src="fnaf3.jpg" alt="FNAF El Cuarto Armario">
-            <p>El Cuarto Armario</p>
-        </div>
-    </div>
-</section>
+/* Botones dinámicos */
+.dynamic-btn {
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    background: linear-gradient(45deg, #d32f2f, #ff9800);
+    transition: background 0.5s, transform 0.3s;
+    margin:10px 0;
+}
+.dynamic-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2196f3, #4caf50);
+}
 
-<!-- Proyectos -->
-<section id="proyectos" class="proyectos fade-in">
-    <h2>Mis Proyectos</h2>
-    <button class="dynamic-btn">Ver Proyecto 1</button>
-    <p>🤖 Robot Sirviente: ayuda a cualquier persona que lo necesite.</p>
-    <img src="robot1.jpg" alt="Robot Sirviente">
-    
-    <button class="dynamic-btn">Ver Proyecto 2</button>
-    <p>📦 Caja de Recuerdos Digital: guarda fotos y momentos especiales.</p>
-    <img src="caja1.jpg" alt="Caja de Recuerdos Digital">
-</section>
+/* Formulario */
+form input, form button { padding:10px; margin:10px 0; width:250px; border-radius:5px; border:none; }
+form button { background:#d32f2f; color:white; }
 
-<!-- Contacto -->
-<section id="contacto" class="contacto fade-in">
-    <h2>Contacto</h2>
-    <form id="contactForm">
-        <input type="text" placeholder="Tu nombre" name="nombre" required>
-        <input type="email" placeholder="Tu correo" name="correo" required>
-        <button type="submit" class="dynamic-btn">Enviar</button>
-    </form>
-</section>
+/* Botón subir arriba */
+#btnArriba { position:fixed; bottom:20px; right:20px; background:#d32f2f; color:white; border:none; padding:12px; border-radius:50%; cursor:pointer; display:none; transition:0.3s; }
+#btnArriba:hover { transform:scale(1.2); }
 
-<!-- Botón subir arriba -->
-<button id="btnArriba">↑</button>
-
-<!-- JS -->
-<script src="script.js"></script>
-</body>
-</html>
+/* Responsive */
+@media(max-width:768px){
+    nav ul li{ display:block; margin:10px 0; }
+    .libros{ flex-direction:column; align-items:center; }
+}
