@@ -1,80 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Vladimir Gómez Sepúlveda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio - Vladimir Gómez Sepúlveda</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="eggman.jpg" alt="Logo Eggman" class="eggman-logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#inicio">🏠 Inicio</a></li>
-            <li><a href="#sobre-mi">👤 Sobre mí</a></li>
-            <li><a href="#gustos">📚 Gustos</a></li>
-            <li><a href="#proyectos">🤖 Proyectos</a></li>
-            <li><a href="#contacto">📞 Contacto</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="eggman.jpg" alt="Logo Eggman" class="eggman-logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">🏠 Inicio</a></li>
+      <li><a href="#sobre-mi">👤 Sobre mí</a></li>
+      <li><a href="#gustos">📚 Gustos</a></li>
+      <li><a href="#proyectos">🤖 Proyectos</a></li>
+      <li><a href="#contacto">📞 Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section id="inicio" class="inicio fade-in">
-    <h1>Vladimir Gómez Sepúlveda</h1>
-    <p>Bienvenidos a mi portafolio personal</p>
-    <img src="eggman.jpg" alt="Eggman" class="eggman-inicio">
+  <h1>Vladimir Gómez Sepúlveda</h1>
+  <p>Bienvenidos a mi portafolio personal</p>
+  <img src="eggman.jpg" alt="Eggman" class="eggman-inicio">
 </section>
 
 <section id="sobre-mi" class="sobre fade-in">
-    <h2>Sobre mí</h2>
-    <button class="dynamic-btn" id="toggleInfo">Ocultar / Revelar Info</button>
-    <div id="infoContent">
-        <p>Tengo 17 años, soy estudiante del CASD y me apasiona la electrónica y los videojuegos.</p>
-        <p>Tal vez se pregunten por qué tengo una foto de Eggman. Fue un personaje que me inspiró de pequeño a crear robots y nunca se rendía.</p>
-    </div>
+  <h2>Sobre mí</h2>
+  <button class="dynamic-btn" id="toggleInfo">Ocultar / Revelar Info</button>
+  <div id="infoContent">
+    <p>Tengo 17 años, soy estudiante del CASD y me apasiona la electrónica y los videojuegos.</p>
+    <p>Tal vez se pregunten por qué tengo una foto de Eggman. Fue un personaje que me inspiró de pequeño a crear robots y nunca se rendía.</p>
+  </div>
 </section>
 
 <section id="gustos" class="gustos fade-in">
-    <h2>Mis Gustos y Pasiones</h2>
-    <p>Me gusta disfrutar de un café ☕ y también cocinar 👨‍🍳.</p>
-    <div class="libros">
-        <div>
-            <img src="fnaf1.jpg" alt="FNAF Los Ojos Plateados">
-            <p>Los Ojos Plateados</p>
-        </div>
-        <div>
-            <img src="fnaf2.jpg" alt="FNAF Los Otros Animatrónicos">
-            <p>Los Otros Animatrónicos</p>
-        </div>
-        <div>
-            <img src="fnaf3.jpg" alt="FNAF El Cuarto Armario">
-            <p>El Cuarto Armario</p>
-        </div>
-    </div>
+  <h2>Mis Gustos y Pasiones</h2>
+  <p>Me gusta disfrutar de un café ☕ y también cocinar 👨‍🍳.</p>
+  <div class="libros">
+    <div><img src="fnaf1.jpg" alt="FNAF Los Ojos Plateados"><p>Los Ojos Plateados</p></div>
+    <div><img src="fnaf2.jpg" alt="FNAF Los Otros Animatrónicos"><p>Los Otros Animatrónicos</p></div>
+    <div><img src="fnaf3.jpg" alt="FNAF El Cuarto Armario"><p>El Cuarto Armario</p></div>
+  </div>
 </section>
 
 <section id="proyectos" class="proyectos fade-in">
-    <h2>Mis Proyectos</h2>
-    <button class="dynamic-btn">Ver Proyecto 1</button>
-    <p>🤖 Robot Sirviente: ayuda a cualquier persona que lo necesite.</p>
-    <img src="robot1.jpg" alt="Robot Sirviente">
-    <button class="dynamic-btn">Ver Proyecto 2</button>
-    <p>📦 Caja de Recuerdos Digital: guarda fotos y momentos especiales.</p>
-    <img src="caja1.jpg" alt="Caja de Recuerdos Digital">
+  <h2>Mis Proyectos</h2>
+  <button class="dynamic-btn project-btn">Ver Proyecto 1</button>
+  <p class="project-desc">🤖 Robot Sirviente: ayuda a cualquier persona que lo necesite.</p>
+  <img src="robot1.jpg" alt="Robot Sirviente" class="project-img">
+
+  <button class="dynamic-btn project-btn">Ver Proyecto 2</button>
+  <p class="project-desc">📦 Caja de Recuerdos Digital: guarda fotos y momentos especiales.</p>
+  <img src="caja1.jpg" alt="Caja de Recuerdos Digital" class="project-img">
 </section>
 
 <section id="contacto" class="contacto fade-in">
-    <h2>Contacto</h2>
-    <form id="contactForm">
-        <input type="text" placeholder="Tu nombre" name="nombre" required>
-        <input type="email" placeholder="Tu correo" name="correo" required>
-        <button type="submit" class="dynamic-btn">Enviar</button>
-    </form>
+  <h2>Contacto</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Tu nombre" name="nombre" required>
+    <input type="email" placeholder="Tu correo" name="correo" required>
+    <button type="submit" class="dynamic-btn">Enviar</button>
+  </form>
 </section>
 
 <button id="btnArriba">↑</button>
