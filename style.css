@@ -1,262 +1,133 @@
+/* General */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
-  line-height: 1.6;
-  scroll-behavior: smooth;
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* Encabezado */
+/* Header y nav */
 header {
-  background: #d32f2f;
-  padding: 15px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background: #d32f2f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #ffcc00;
+.nav-links a:hover {
+    color: #ffcc00;
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(45deg, #d32f2f, #000);
-}
-
-.hero img.perfil {
-  width: 180px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  margin-bottom: 20px;
-  animation: zoomIn 2s;
+/* Logo */
+.eggman-logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Secciones */
 section {
-  padding: 40px 20px;
-  text-align: center;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* Secciones específicas */
+/* Inicio */
+.inicio img.eggman-inicio {
+    width: 150px;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Sección Gustos */
 #gustos {
-  background: linear-gradient(45deg, #ff3d3d, #ff9800);
+    background: linear-gradient(45deg, #ff3d3d, #ff9800);
 }
 
+/* Sección Contacto */
 #contacto {
-  background: linear-gradient(45deg, #d32f2f, #2196f3);
+    background: linear-gradient(45deg, #d32f2f, #2196f3);
 }
 
-/* Hobbies cards */
-.hobbies {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+/* Libros y hobbies */
+.libros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.card {
-  background: #222;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  width: 120px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.libros div {
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-}
-
-.card i {
-  font-size: 30px;
-  color: #ff3d3d;
-  margin-bottom: 10px;
-}
-
-/* Proyectos */
-#proyectos button {
-  padding: 10px 20px;
-  background: #d32f2f;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.3s, background 0.3s;
-}
-
-#proyectos button:hover {
-  transform: scale(1.1);
-  background: #ff3d3d;
-}
-
-#proyectoContenido {
-  margin-top: 20px;
-  display: none;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-/* Habilidades */
-.skill {
-  margin: 20px 0;
-}
-
-.barra {
-  background: #333;
-  border-radius: 20px;
-  height: 20px;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.barra span {
-  display: block;
-  height: 100%;
-  background: #d32f2f;
-  border-radius: 20px;
-  transition: width 1s ease-in-out;
-}
-
-/* Contacto */
-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form input, form button {
-  margin: 10px 0;
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: none;
-}
-
-form button {
-  background: #ff0000;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-form button:hover {
-  background: #ff5722;
-  transform: scale(1.05);
-}
-
-/* Botón arriba */
+/* Botón subir arriba */
 #btnArriba {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #d32f2f;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 50%;
-  display: none;
-  cursor: pointer;
-  transition: transform 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s;
 }
 
 #btnArriba:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  margin-top: 20px;
-}
-
-/* Animaciones */
+/* Fade-in */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
 }
 
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.5); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
 
-  form input, form button {
-    width: 90%;
-  }
-
-  .hobbies {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* Ajustes para que Eggman no tape info */
-
-/* Logo del header */
-header .eggman-logo, header .logo img {
-    width: 80px;           /* más pequeño que antes */
-    height: auto;
-    max-height: 80px;
-    object-fit: contain;
-}
-
-/* Imagen en la sección Inicio */
-.inicio img, .eggman-inicio {
-    width: 150px;          /* tamaño adecuado */
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    display: block;
-    margin: 20px auto;     /* centra y agrega espacio */
-}
-
-/* Ajustes generales de info sobre la imagen */
-.inicio h1, .inicio p {
-    position: relative;
-    z-index: 10;           /* asegura que texto quede encima */
+    .libros {
+        flex-direction: column;
+        align-items: center;
+    }
 }
