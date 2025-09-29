@@ -236,3 +236,28 @@ footer {
     align-items: center;
   }
 }
+/* Ajustes para que Eggman no tape info */
+
+/* Logo del header */
+header .eggman-logo, header .logo img {
+    width: 80px;           /* más pequeño que antes */
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Imagen en la sección Inicio */
+.inicio img, .eggman-inicio {
+    width: 150px;          /* tamaño adecuado */
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;     /* centra y agrega espacio */
+}
+
+/* Ajustes generales de info sobre la imagen */
+.inicio h1, .inicio p {
+    position: relative;
+    z-index: 10;           /* asegura que texto quede encima */
+}
