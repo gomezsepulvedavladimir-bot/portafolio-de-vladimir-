@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio - Vladimir Gómez Sepúlveda</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Vladimir Gómez Sepúlveda</title>
+    <meta name="description" content="Portafolio de Vladimir Gómez Sepúlveda, estudiante y apasionado por la electrónica y videojuegos.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="eggman.jpg" alt="Logo de Eggman" class="eggman-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">🏠 Inicio</a></li>
+                <li><a href="#sobre-mi">👤 Sobre mí</a></li>
+                <li><a href="#gustos">📚 Gustos</a></li>
+                <li><a href="#proyectos">🤖 Proyectos</a></li>
+                <li><a href="#contacto">📞 Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="eggman.jpg" alt="Logo Eggman" class="eggman-logo">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#inicio">🏠 Inicio</a></li>
-      <li><a href="#sobre-mi">👤 Sobre mí</a></li>
-      <li><a href="#gustos">📚 Gustos</a></li>
-      <li><a href="#proyectos">🤖 Proyectos</a></li>
-      <li><a href="#contacto">📞 Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+    <main>
+        <!-- Inicio -->
+        <section id="inicio" class="inicio fade-in">
+            <h1>Vladimir Gómez Sepúlveda</h1>
+            <p>Bienvenidos a mi portafolio personal</p>
+            <img src="eggman.jpg" alt="Foto de Eggman" class="eggman-inicio">
+        </section>
 
-<section id="inicio" class="inicio fade-in">
-  <h1>Vladimir Gómez Sepúlveda</h1>
-  <p>Bienvenidos a mi portafolio personal</p>
-  <img src="eggman.jpg" alt="Eggman" class="eggman-inicio">
-</section>
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="sobre-mi fade-in">
+            <h2>Sobre mí</h2>
+            <button id="toggleInfo">Ocultar / Revelar Info</button>
+            <div id="infoContent">
+                <p>Tengo 17 años, soy estudiante del CASD y me apasiona la electrónica y los videojuegos.</p>
+                <p>Tal vez se pregunten por qué tengo una foto de Eggman en mi portafolio. Eggman fue uno de los personajes que me inspiraron de pequeño a crear robots. No me importaba que fuera malo, lo que me importaba es que nunca se rendía: aunque le destruyeran sus robots, él seguía intentando. Por eso es mi ejemplo a seguir.</p>
+            </div>
+        </section>
 
-<section id="sobre-mi" class="sobre fade-in">
-  <h2>Sobre mí</h2>
-  <button class="dynamic-btn" id="toggleInfo">Ocultar / Revelar Info</button>
-  <div id="infoContent">
-    <p>Tengo 17 años, soy estudiante del CASD y me apasiona la electrónica y los videojuegos.</p>
-    <p>Tal vez se pregunten por qué tengo una foto de Eggman. Fue un personaje que me inspiró de pequeño a crear robots y nunca se rendía.</p>
-  </div>
-</section>
+        <!-- Gustos -->
+        <section id="gustos" class="gustos fade-in">
+            <h2>Mis Gustos y Pasiones</h2>
+            <p>Me gusta disfrutar de un café en un día soleado ☕🌞 y también cocinar 👨‍🍳.</p>
+            <p>Soy fan de la saga de libros de Five Nights at Freddy’s (FNAF), porque cuentan historias diferentes a los juegos, llenas de misterio y emoción:</p>
+            <div class="libros">
+                <div>
+                    <img src="fnaf1.jpg" alt="FNAF Los Ojos Plateados">
+                    <p>Los Ojos Plateados</p>
+                </div>
+                <div>
+                    <img src="fnaf2.jpg" alt="FNAF Los Otros Animatrónicos">
+                    <p>Los Otros Animatrónicos</p>
+                </div>
+                <div>
+                    <img src="fnaf3.jpg" alt="FNAF El Cuarto Armario">
+                    <p>El Cuarto Armario</p>
+                </div>
+            </div>
+        </section>
 
-<section id="gustos" class="gustos fade-in">
-  <h2>Mis Gustos y Pasiones</h2>
-  <p>Me gusta disfrutar de un café ☕ y también cocinar 👨‍🍳.</p>
-  <div class="libros">
-    <div><img src="fnaf1.jpg" alt="FNAF Los Ojos Plateados"><p>Los Ojos Plateados</p></div>
-    <div><img src="fnaf2.jpg" alt="FNAF Los Otros Animatrónicos"><p>Los Otros Animatrónicos</p></div>
-    <div><img src="fnaf3.jpg" alt="FNAF El Cuarto Armario"><p>El Cuarto Armario</p></div>
-  </div>
-</section>
+        <!-- Proyectos -->
+        <section id="proyectos" class="proyectos fade-in">
+            <h2>Mis Proyectos</h2>
 
-<section id="proyectos" class="proyectos fade-in">
-  <h2>Mis Proyectos</h2>
-  <button class="dynamic-btn project-btn">Ver Proyecto 1</button>
-  <p class="project-desc">🤖 Robot Sirviente: ayuda a cualquier persona que lo necesite.</p>
-  <img src="robot1.jpg" alt="Robot Sirviente" class="project-img">
+            <button class="dynamic-btn" data-target="proyecto1">Proyecto 1: Robot Sirviente</button>
+            <div id="proyecto1" class="proyecto-content">
+                <p>Un robot que ayude a cualquier persona que lo necesite, sin importar su estatus o sus capacidades.</p>
+                <img src="robot1.jpg" alt="Robot Sirviente">
+            </div>
 
-  <button class="dynamic-btn project-btn">Ver Proyecto 2</button>
-  <p class="project-desc">📦 Caja de Recuerdos Digital: guarda fotos y momentos especiales.</p>
-  <img src="caja1.jpg" alt="Caja de Recuerdos Digital" class="project-img">
-</section>
+            <button class="dynamic-btn" data-target="proyecto2">Proyecto 2: Caja de Recuerdos Digital</button>
+            <div id="proyecto2" class="proyecto-content">
+                <p>Pensada para personas con Alzheimer o para quienes quieren revivir bellos recuerdos. Esta caja digital guarda fotos y momentos especiales.</p>
+                <img src="caja1.jpg" alt="Caja de Recuerdos Digital">
+            </div>
+        </section>
 
-<section id="contacto" class="contacto fade-in">
-  <h2>Contacto</h2>
-  <form id="contactForm">
-    <input type="text" placeholder="Tu nombre" name="nombre" required>
-    <input type="email" placeholder="Tu correo" name="correo" required>
-    <button type="submit" class="dynamic-btn">Enviar</button>
-  </form>
-</section>
+        <!-- Contacto -->
+        <section id="contacto" class="contacto fade-in">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>📞 Teléfono: 333 6405384</p>
+            <p>📧 Correo: gomezsepulvedavladimir@gmail.com</p>
+            <p>TikTok: <a href="https://www.tiktok.com/@userfhpe5kzamu" target="_blank">@userfhpe5kzamu</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/gomezsepulvedavladimir" target="_blank">@gomezsepulvedavladimir</a></p>
+        </section>
+    </main>
 
-<button id="btnArriba">↑</button>
-<script src="script.js"></script>
+    <!-- Botón subir arriba -->
+    <button id="btnArriba">↑</button>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
 </body>
 </html>
