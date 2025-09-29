@@ -1,113 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Vladimir Gómez Sepúlveda</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Vinculamos CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+// Animación fade-in de secciones
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
 
-    <!-- Menú de navegación -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="eggman.jpg" alt="Logo Eggman" class="eggman-logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">🏠 Inicio</a></li>
-                <li><a href="#sobre-mi">👤 Sobre mí</a></li>
-                <li><a href="#gustos">📚 Gustos</a></li>
-                <li><a href="#proyectos">🤖 Proyectos</a></li>
-                <li><a href="#contacto">📞 Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
 
-    <!-- Inicio -->
-    <section id="inicio" class="inicio">
-        <h1>Vladimir Gómez Sepúlveda</h1>
-        <p>Bienvenidos a mi portafolio personal</p>
-        <img src="eggman.jpg" alt="Eggman" class="eggman-inicio">
-    </section>
+faders.forEach(fader => appearOnScroll.observe(fader));
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="sobre-mi fade-in">
-        <h2>Sobre mí</h2>
-        <p>Tengo 17 años, soy estudiante del CASD y me apasiona la electrónica y los videojuegos.</p>
-        <p>
-            Tal vez se pregunten por qué tengo una foto de Eggman en mi portafolio.  
-            Eggman fue uno de los personajes que me inspiraron de pequeño a crear robots.  
-            No me importaba que fuera malo, lo que me importaba es que nunca se rendía:  
-            aunque le destruyeran sus robots, él seguía intentando.  
-            Por eso es mi ejemplo a seguir.
-        </p>
-    </section>
-
-    <!-- Mis Gustos -->
-    <section id="gustos" class="gustos fade-in">
-        <h2>Mis Gustos y Pasiones</h2>
-        <p>Me gusta disfrutar de un café en un día soleado ☕🌞 y también cocinar 👨‍🍳.</p>
-        <p>
-            Soy fan de la saga de libros de Five Nights at Freddy’s (FNAF), porque cuentan historias
-            diferentes a los juegos, llenas de misterio y emoción:
-        </p>
-        <div class="libros">
-            <div>
-                <img src="fnaf1.jpg" alt="FNAF Los Ojos Plateados">
-                <p>Los Ojos Plateados</p>
-            </div>
-            <div>
-                <img src="fnaf2.jpg" alt="FNAF Los Otros Animatrónicos">
-                <p>Los Otros Animatrónicos</p>
-            </div>
-            <div>
-                <img src="fnaf3.jpg" alt="FNAF El Cuarto Armario">
-                <p>El Cuarto Armario</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="proyectos fade-in">
-        <h2>Mis Proyectos</h2>
-
-        <h3>🤖 Robot Sirviente</h3>
-        <p>Un robot que ayude a cualquier persona que lo necesite, sin importar su estatus o sus capacidades.</p>
-        <img src="robot1.jpg" alt="Robot Sirviente">
-
-        <h3>📦 Caja de Recuerdos Digital</h3>
-        <p>Pensada para personas con Alzheimer o para quienes quieren revivir bellos recuerdos.  
-           Esta caja digital guarda fotos y momentos especiales.</p>
-        <img src="caja1.jpg" alt="Caja de Recuerdos Digital">
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="contacto fade-in">
-        <h2>Contacto</h2>
-        <p>📞 Teléfono: 333 6405384</p>
-        <p>📧 Correo: gomezsepulvedavladimir@gmail.com</p>
-        <p>
-            TikTok:  
-            <a href="https://www.tiktok.com/@userfhpe5kzamu?_t=ZS-907O1ow4Bgl&_r=1" target="_blank">
-                @userfhpe5kzamu
-            </a>
-        </p>
-        <p>
-            Instagram:  
-            <a href="https://www.instagram.com/gomezsepulvedavladimir?igsh=YzljYTk1ODg3Zg==" target="_blank">
-                @gomezsepulvedavladimir
-            </a>
-        </p>
-    </section>
-
-    <!-- Botón subir arriba -->
-    <button id="btnArriba">↑</button>
-
-    <!-- Vinculamos JS -->
-    <script src="script.js"></script>
-</body>
-</html>
+// Botón subir arriba
+const btnArriba = document.getElementById('btnArriba');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) btnArriba.style.display = 'block';
+    else btnArriba.style.display = 'none';
+});
+btnArriba.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
