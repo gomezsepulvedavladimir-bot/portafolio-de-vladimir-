@@ -1,4 +1,4 @@
-/* General */
+/* Reset y base */
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
@@ -8,7 +8,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Header y nav */
+/* Encabezado y navegación */
 header {
     background: #d32f2f;
     padding: 15px 0;
@@ -18,29 +18,29 @@ header {
     text-align: center;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.nav-links li {
+nav ul li {
     display: inline-block;
     margin: 0 15px;
 }
 
-.nav-links a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+nav a:hover {
     color: #ffcc00;
 }
 
-/* Logo */
+/* Logo Eggman */
 .eggman-logo {
     width: 80px;
     height: auto;
@@ -53,26 +53,16 @@ section {
     text-align: center;
 }
 
-/* Inicio */
-.inicio img.eggman-inicio {
-    width: 150px;
-    max-height: 200px;
-    object-fit: contain;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Sección Gustos */
+/* Secciones específicas */
 #gustos {
     background: linear-gradient(45deg, #ff3d3d, #ff9800);
 }
 
-/* Sección Contacto */
 #contacto {
     background: linear-gradient(45deg, #d32f2f, #2196f3);
 }
 
-/* Libros y hobbies */
+/* Libros / gustos */
 .libros {
     display: flex;
     justify-content: center;
@@ -81,11 +71,22 @@ section {
 }
 
 .libros div {
-    background: #222;
-    border-radius: 10px;
-    padding: 20px;
     margin: 10px;
-    width: 150px;
+}
+
+.libros img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Proyectos */
+.proyectos img {
+    width: 200px;
+    max-width: 90%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
 /* Botón subir arriba */
@@ -98,8 +99,8 @@ section {
     border: none;
     padding: 12px;
     border-radius: 50%;
-    cursor: pointer;
     display: none;
+    cursor: pointer;
     transition: transform 0.3s;
 }
 
@@ -107,7 +108,7 @@ section {
     transform: scale(1.2);
 }
 
-/* Fade-in */
+/* Animaciones */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -119,9 +120,18 @@ section {
     transform: translateY(0);
 }
 
+/* Imagen en sección inicio */
+.eggman-inicio {
+    width: 150px;
+    max-height: 200px;
+    margin: 20px auto;
+    display: block;
+    object-fit: contain;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links li {
+    nav ul li {
         display: block;
         margin: 10px 0;
     }
