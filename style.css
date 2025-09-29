@@ -7,7 +7,8 @@ nav a:hover { color:#ffcc00; }
 .eggman-logo { width:80px; height:auto; }
 
 section { padding:40px 20px; text-align:center; }
-.inicio img.eggman-inicio { width:150px; max-height:200px; margin:20px auto; display:block; }
+.inicio img.eggman-inicio { width:150px; max-height:200px; margin:20px auto; display:block; transition: transform 1s; }
+.inicio img.eggman-inicio:hover { transform: scale(1.2); }
 
 .fade-in { opacity:0; transform:translateY(20px); transition:all 1s ease; }
 .fade-in.visible { opacity:1; transform:translateY(0); }
@@ -15,13 +16,13 @@ section { padding:40px 20px; text-align:center; }
 .dynamic-btn { padding:10px 20px; border:none; border-radius:10px; color:white; cursor:pointer; font-weight:bold; background: linear-gradient(45deg, #d32f2f, #ff9800); transition: background 0.5s, transform 0.3s; margin:10px 0; }
 .dynamic-btn:hover { transform: scale(1.1); background: linear-gradient(45deg, #2196f3, #4caf50); }
 
+.project-img { width:200px; max-height:150px; display:block; margin:10px auto; transition: transform 0.5s; }
+.project-img:hover { transform: scale(1.1); }
+
 form input, form button { padding:10px; margin:10px 0; width:250px; border-radius:5px; border:none; }
 form button { background:#d32f2f; color:white; }
 
 #btnArriba { position:fixed; bottom:20px; right:20px; background:#d32f2f; color:white; border:none; padding:12px; border-radius:50%; cursor:pointer; display:none; transition:0.3s; }
 #btnArriba:hover { transform:scale(1.2); }
 
-@media(max-width:768px){
-    nav ul li{ display:block; margin:10px 0; }
-    .libros{ flex-direction:column; align-items:center; }
-}
+@media(max-width:768px){ nav ul li{ display:block; margin:10px 0; } .libros{ flex-direction:column; align-items:center; } }
